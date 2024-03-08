@@ -1,0 +1,642 @@
+-- phpMyAdmin SQL Dump
+-- version 2.11.11.3
+-- http://www.phpmyadmin.net
+--
+-- Host: 184.168.225.45
+-- Generation Time: Apr 26, 2013 at 05:40 AM
+-- Server version: 5.0.96
+-- PHP Version: 5.1.6
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `glomindz`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `spl_customer_address`
+--
+
+CREATE TABLE `spl_customer_address` (
+  `id` int(11) NOT NULL auto_increment,
+  `company_id` int(11) NOT NULL,
+  `address_type` enum('Billing','Transport') NOT NULL default 'Transport',
+  `address` text NOT NULL,
+  `locality` varchar(40) NOT NULL,
+  `city` varchar(40) NOT NULL,
+  `state` varchar(40) NOT NULL,
+  `country` varchar(40) NOT NULL,
+  `pin` varchar(40) NOT NULL,
+  `tel` varchar(40) NOT NULL,
+  `fax` varchar(40) NOT NULL,
+  `last_update` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=24 ;
+
+--
+-- Dumping data for table `spl_customer_address`
+--
+
+INSERT INTO `spl_customer_address` VALUES(1, 1, 'Billing', '', '', 'North Lakhimpur', 'Assam', 'India', '', '', '', '2013-04-17 03:57:08');
+INSERT INTO `spl_customer_address` VALUES(2, 2, 'Billing', '', '', 'Silapathar', 'Assam', 'India', '', '', '', '2013-04-17 03:59:20');
+INSERT INTO `spl_customer_address` VALUES(3, 3, 'Billing', '', '', 'Dhubri', 'Assam', 'India', '783301', '', '', '2013-04-17 04:01:40');
+INSERT INTO `spl_customer_address` VALUES(4, 4, 'Billing', '', '', 'Dhekiajuli', '', 'India', '784110', '', '', '2013-04-17 04:03:52');
+INSERT INTO `spl_customer_address` VALUES(5, 5, 'Billing', '', '', 'Tezpur', 'Assam', 'India', '', '', '', '2013-04-17 04:06:09');
+INSERT INTO `spl_customer_address` VALUES(6, 6, 'Billing', '', '', 'Dhupdhara', 'Assam', 'India', '783123', '', '', '2013-04-17 04:08:09');
+INSERT INTO `spl_customer_address` VALUES(7, 7, 'Billing', '', '', 'Goalpara', 'Assam', 'India', '783121', '', '', '2013-04-17 04:09:38');
+INSERT INTO `spl_customer_address` VALUES(8, 8, 'Billing', '', '', 'Hatsingimari', 'Assam ', 'India', '', '', '', '2013-04-17 04:12:15');
+INSERT INTO `spl_customer_address` VALUES(9, 9, 'Billing', '', '', 'Lumding', 'Assam', 'India', '', '', '', '2013-04-17 04:14:20');
+INSERT INTO `spl_customer_address` VALUES(10, 10, 'Billing', 'TANGLA', 'TB ROAD', 'TANGLA, UDALGURI', 'ASSAM', 'INDIA', '784521', '', '', '2013-04-23 04:49:57');
+INSERT INTO `spl_customer_address` VALUES(11, 11, 'Billing', 'TB ROAD', 'TANGLA', 'UDULGURI', 'ASSAM', 'INDIA', '784521', '', '', '2013-04-23 04:52:12');
+INSERT INTO `spl_customer_address` VALUES(12, 12, 'Billing', 'NAMGHAR ROAD', 'BARPETA ROAD', 'BARPETA', 'ASSAM', 'INDIA', '781315', '', '', '2013-04-23 04:55:09');
+INSERT INTO `spl_customer_address` VALUES(13, 13, 'Billing', '', '', '', '', '', '', '', '', '2013-04-23 04:56:04');
+INSERT INTO `spl_customer_address` VALUES(14, 14, 'Billing', 'PANCHARATNA ROAD', 'GOALPARA', 'GOALPARA', 'ASSAM', 'INDIA', '', '', '', '2013-04-23 04:57:52');
+INSERT INTO `spl_customer_address` VALUES(15, 15, 'Billing', 'LAKHIPUR', '', '', 'ASSAM', 'INDIA', '', '', '', '2013-04-23 04:59:46');
+INSERT INTO `spl_customer_address` VALUES(16, 16, 'Billing', 'MITRA COMPLEX', 'KRISHNAI', 'GOALPARA', 'ASSAM', 'INDIA', '', '', '', '2013-04-23 05:01:29');
+INSERT INTO `spl_customer_address` VALUES(17, 17, 'Billing', 'NIRADA MARKET', 'DHUPDHARA', 'GOALPARA', 'ASSAM', 'INDIA', '783123', '', '', '2013-04-23 05:03:50');
+INSERT INTO `spl_customer_address` VALUES(18, 18, 'Billing', 'BAKO', 'KAMRUP', '', 'ASSAM', 'INDIA', '781123', '', '', '2013-04-23 05:05:10');
+INSERT INTO `spl_customer_address` VALUES(19, 19, 'Billing', 'SHIB BARI ROAD', '', 'KARIMGANJ', 'ASSAM', 'INDIA', '', '', '', '2013-04-23 05:07:18');
+INSERT INTO `spl_customer_address` VALUES(20, 20, 'Billing', 'WARD NO 03', 'VIVEKANANDA ROAD', 'DHUBRI', 'ASSAM', 'INDIA', '783301', '', '', '2013-04-23 05:11:25');
+INSERT INTO `spl_customer_address` VALUES(21, 21, 'Billing', 'NS ROAD', '', 'DHUBRI', 'ASSAM', 'INDIA', '', '', '', '2013-04-26 00:42:41');
+INSERT INTO `spl_customer_address` VALUES(22, 22, 'Billing', 'WARD NO 3', 'VIVEKANANDA ROAD', 'DHUBRI', 'ASSAM', 'INDIA', '', '', '', '2013-04-23 05:14:45');
+INSERT INTO `spl_customer_address` VALUES(23, 23, 'Billing', 'DEWAL ROAD', '', 'JORHAT', 'ASSAM', 'INDIA', '785001', '', '', '2013-04-23 05:16:44');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `spl_customer_database`
+--
+
+CREATE TABLE `spl_customer_database` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(40) NOT NULL,
+  `company` varchar(80) NOT NULL,
+  `customer_type` enum('Trade','Institutional','Government') NOT NULL default 'Trade',
+  `email` varchar(80) NOT NULL,
+  `mobile` varchar(40) NOT NULL,
+  `tel` varchar(40) NOT NULL,
+  `fax` varchar(40) NOT NULL,
+  `pan` varchar(40) NOT NULL,
+  `vat` varchar(40) NOT NULL,
+  `cst` varchar(40) NOT NULL,
+  `cst_valid` varchar(40) NOT NULL,
+  `bank_name` varchar(40) NOT NULL,
+  `bank_branch` varchar(40) NOT NULL,
+  `bank_city` varchar(40) NOT NULL,
+  `bank_swift_code` varchar(40) NOT NULL,
+  `bank_ac_no` varchar(40) NOT NULL,
+  `rating` varchar(40) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `last_update` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=24 ;
+
+--
+-- Dumping data for table `spl_customer_database`
+--
+
+INSERT INTO `spl_customer_database` VALUES(1, 'Bhuban Gogoi', 'PIMA PHARMACEUTICALS', 'Trade', '', '9401168326', '', '', '', '', '', '', 'Allahabad Bank', 'Lakhimpur', 'North Lakhimpur', '', '20700287410', 'New Customer', 0, '2013-04-25 02:18:21');
+INSERT INTO `spl_customer_database` VALUES(2, 'Kripa Shankar Prajapati', 'PRAJAPATI  DRUG DISTRIBUTORS', '', '', '9435188559', '', '', '', '18630127596', '', '', 'United Bank of India', 'Silapathar', 'Silapathar', '', '0586050011875', 'New Customer', 0, '2013-04-23 05:22:21');
+INSERT INTO `spl_customer_database` VALUES(3, 'B Basid Shankar', 'MOZAHEDIA DRUGS ENTERPRISE', '', '', '8761958797', '', '', '', '18350137838', '', '', 'United Bank of India', 'Dhubri', '', '', '1102250027636', 'New Customer', 0, '2013-04-23 05:23:12');
+INSERT INTO `spl_customer_database` VALUES(4, 'Titon Dutta', 'DUTTA PHARMACEUTICALS', '', '', '9707753466', '', '', '', '18810126624', '', '', 'Assam Gramin Vikash Bank', '', '', '', '', 'New Customer', 0, '2013-04-23 05:24:33');
+INSERT INTO `spl_customer_database` VALUES(5, 'Pandit', 'SAGAR PHARMACEUTICALS', 'Trade', '', '9435083911', '', '', 'AWJPP2520M', '18050102113', '', '', 'Vijaya Bank', 'Tezpur', '', '', '800506021000014', 'New Customer', 0, '2013-04-25 05:29:49');
+INSERT INTO `spl_customer_database` VALUES(6, 'Gopen Kalita', 'G P DRUG  DISTRUBUTORS', '', '', '9707703773', '', '', 'AAJFG2759B', '18940057171', '', '', 'State Bank of India', 'Dhupdhara', '', '', '31341400499', 'New Customer', 0, '2013-04-23 05:24:13');
+INSERT INTO `spl_customer_database` VALUES(7, 'Shahjahan Ali', 'ROSE PHARMA', '', '', '9707518850', '', '', '', '', '', '', 'State Bank of India', '', '', '', '', 'New Customer', 0, '2013-04-23 05:21:51');
+INSERT INTO `spl_customer_database` VALUES(8, 'Raghunath Saha', 'PARBATI DRUG & SURGICALS', '', '', '9435129768', '', '', 'ASQPS5785A', '18490110795', '', '', 'State Bank of India', 'Hatsingimari', '', '', '31473096055', 'New Customer', 0, '2013-04-23 05:23:44');
+INSERT INTO `spl_customer_database` VALUES(9, 'Sibu Sen', 'S S PHARMACEUTICALS', 'Trade', '', '03674260288', '', '', '', '18090097477', '', '', 'Allahabad Bank', 'Lumding', '', '', '400659', 'New Customer', 0, '2013-04-26 00:37:45');
+INSERT INTO `spl_customer_database` VALUES(10, 'RANJIT KUMAR DAS', 'R K MEDICAL STORE', 'Trade', '', '09435184502', '', '', '', '18790121203', '', '', 'STATE BANK OF INDIA', '', '', '', '', 'New Customer', 0, '2013-04-23 04:49:57');
+INSERT INTO `spl_customer_database` VALUES(11, 'BIJU SAHA', 'KRISHNA DRUG DISTRIBUTORS', 'Trade', '', '9854636073', '', '', '', '18830133597', '', '', 'UCO BANK', '', 'TANGLA', '', '17180210000588', 'New Customer', 0, '2013-04-23 04:52:12');
+INSERT INTO `spl_customer_database` VALUES(12, 'SUBIMAL SAHA', 'NEW MANASH ENTERPRISE', '', '', '8876475572', '', '', '', '18710009988', '', '', 'AGVB', '', '', '', '7103150000004', 'New Customer', 0, '2013-04-23 04:55:52');
+INSERT INTO `spl_customer_database` VALUES(14, 'ASHISH CHAKRAVARTY', 'UNIQUE DRUG DISTRIBUTORS', 'Trade', '', '9954646243', '', '', '', '18840008801', '', '', 'AGVB', '', '', '', 'CC 40', 'New Customer', 0, '2013-04-23 04:57:52');
+INSERT INTO `spl_customer_database` VALUES(15, 'SADDAM HUSSAIN', 'HUSSAIN DRUG DISTRIBUTORS', 'Trade', '', '9435522630', '', '', '', '18860123832', '', '', 'UCO BANK', '', '', '', '', 'New Customer', 0, '2013-04-23 04:59:46');
+INSERT INTO `spl_customer_database` VALUES(16, 'SHYMAL MITRA', 'MITRA DRUG DISTRIBUTORS', 'Trade', '', '9435122470', '', '', '', '18540122165', '', '', 'AXIS BANK', '', '', '', '911020037242791', 'New Customer', 0, '2013-04-26 00:38:06');
+INSERT INTO `spl_customer_database` VALUES(17, 'SHYAM PRASAD SAHA', 'FRIENDS DRUG AGENCY', 'Trade', '', '9864280138', '', '', '', '18120136849', '', '', 'SBI', '', '', '', '20033459492', 'New Customer', 0, '2013-04-23 05:03:50');
+INSERT INTO `spl_customer_database` VALUES(18, 'ANUPAM DAS', 'GAYASHREE PHARMACEUTICALS & SURGICALS', 'Trade', '', '9854039799', '', '', '', '18620043842', '', '', 'ALLAHBAD BANK', '', '', '', '50086117100', 'New Customer', 0, '2013-04-23 05:05:10');
+INSERT INTO `spl_customer_database` VALUES(19, 'BIRAJ NATH', 'DRUGS INDIA ( W)', '', 'drugsindia.kmj@gmail.com', '03843 262638', '', '', '', '18500008312', '18399917633', '', 'UCO BANK', 'KARIMGANJ', '', '', '08220500000192', 'New Customer', 0, '2013-04-23 05:07:57');
+INSERT INTO `spl_customer_database` VALUES(20, 'SUJIT KUMAR DEY', 'MIMI DRUG HOUSE', '', '', '9854573725', '', '', '', '18630124104', '', '', 'CENTRAL BANK OF INDIA', 'DHUBURI', '', '', '2154789899', 'New Customer', 0, '2013-04-23 05:11:25');
+INSERT INTO `spl_customer_database` VALUES(21, 'SOFIQUL SARKAR', 'SARKAR PHARMACEUTICALS', 'Trade', '', '9954751484', '', '', '', '18680102688', '', '', 'SBI', '', '', '', '32576005030', 'New Customer', 0, '2013-04-23 05:12:59');
+INSERT INTO `spl_customer_database` VALUES(22, 'ASHIM KR SAHA', 'SAHA DRUG DISTRIBUTORS', 'Trade', '', '9435029562', '', '', '', '18870139686', '', '', 'UCO BANK', '', '', '', '', 'New Customer', 0, '2013-04-23 05:14:45');
+INSERT INTO `spl_customer_database` VALUES(23, 'RANJAN DEY', 'MANISON DRUG AGENCY', 'Trade', '', '0376 232194', '', '', '', '18530017265', '', '', 'BANK OF INDIA', '', '', '', '406220100000143', 'New Customer', 0, '2013-04-23 05:16:44');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `spl_customer_discount_master`
+--
+
+CREATE TABLE `spl_customer_discount_master` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(40) NOT NULL,
+  `remarks` varchar(80) NOT NULL,
+  `customer_type` enum('Trade','Institutional','Government') NOT NULL,
+  `percentage` float NOT NULL,
+  `status` tinyint(1) NOT NULL default '1',
+  `valid_from` date NOT NULL,
+  `valid_to` date NOT NULL,
+  `last_update` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;
+
+--
+-- Dumping data for table `spl_customer_discount_master`
+--
+
+INSERT INTO `spl_customer_discount_master` VALUES(5, 'Cash Discount 10%', 'Cash Discount 10%', 'Trade', 10, 1, '2000-01-01', '2099-01-01', '2013-04-24 12:10:43');
+INSERT INTO `spl_customer_discount_master` VALUES(6, 'Cash Discount 5%', 'Cash Discount 5%', 'Institutional', 5, 0, '2000-01-01', '2099-01-01', '2013-04-24 23:33:47');
+INSERT INTO `spl_customer_discount_master` VALUES(7, 'Govt Discount 2%', 'Govt Discount 2%', 'Government', 2, 0, '2000-01-01', '2099-01-01', '2013-04-24 23:06:50');
+INSERT INTO `spl_customer_discount_master` VALUES(12, 'No Claim 3%', 'Cash Discount 3%', 'Trade', 3, 0, '0000-00-00', '0000-00-00', '2013-04-24 23:06:45');
+INSERT INTO `spl_customer_discount_master` VALUES(13, 'Special Discount (Local) 7%', 'For Guwahati Greater', 'Institutional', 7, 1, '0000-00-00', '0000-00-00', '2013-04-24 23:06:17');
+INSERT INTO `spl_customer_discount_master` VALUES(14, 'Cash & Carry 12%', 'table cash', 'Trade', 12, 0, '0000-00-00', '0000-00-00', '2013-04-24 23:06:38');
+INSERT INTO `spl_customer_discount_master` VALUES(15, 'Trade & No claim 8%', 'General for all trade', 'Trade', 8, 0, '0000-00-00', '0000-00-00', '2013-04-24 23:06:35');
+INSERT INTO `spl_customer_discount_master` VALUES(16, 'CST Sales 12%', 'For Intra State Trade (SS)', 'Trade', 12, 1, '0000-00-00', '0000-00-00', '2013-04-24 12:10:43');
+INSERT INTO `spl_customer_discount_master` VALUES(17, 'Cash Discount @ 3%', '', 'Trade', 3, 1, '0000-00-00', '0000-00-00', '2013-04-23 04:32:45');
+INSERT INTO `spl_customer_discount_master` VALUES(18, 'No Claim Discount @ 2%', '', 'Trade', 2, 1, '0000-00-00', '0000-00-00', '2013-04-23 04:33:06');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `spl_customer_payments`
+--
+
+CREATE TABLE `spl_customer_payments` (
+  `id` int(11) NOT NULL auto_increment,
+  `customer_id` int(11) NOT NULL,
+  `order_id` int(11) NOT NULL,
+  `amount` float NOT NULL,
+  `cumulative_amount` float NOT NULL,
+  `payment_date` date NOT NULL,
+  `payment_mode` varchar(40) NOT NULL,
+  `instrument_number` varchar(40) NOT NULL,
+  `instrument_date` date NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `last_update` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `spl_customer_payments`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `spl_invoice_master`
+--
+
+CREATE TABLE `spl_invoice_master` (
+  `id` int(11) NOT NULL auto_increment,
+  `order_id` int(11) NOT NULL,
+  `customer_address_id` int(11) NOT NULL,
+  `challan_no` varchar(40) NOT NULL,
+  `challan_date` date NOT NULL,
+  `devilery_date` date NOT NULL,
+  `payment_mode` varchar(40) NOT NULL,
+  `despatch_no` varchar(40) NOT NULL,
+  `despatch_date` date NOT NULL,
+  `despatch_through` varchar(40) NOT NULL,
+  `devilery_terms` varchar(40) NOT NULL,
+  `destination` varchar(40) NOT NULL,
+  `invoice_date` date NOT NULL,
+  `status` enum('Open','Closed') NOT NULL default 'Open',
+  `user_id` int(11) NOT NULL,
+  `last_update` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `spl_invoice_master`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `spl_order_item_list`
+--
+
+CREATE TABLE `spl_order_item_list` (
+  `id` int(11) NOT NULL auto_increment,
+  `order_id` int(11) NOT NULL,
+  `price_id` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `spl_order_item_list`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `spl_order_master`
+--
+
+CREATE TABLE `spl_order_master` (
+  `id` int(11) NOT NULL auto_increment,
+  `customer_id` int(11) default NULL,
+  `prefered_delivery_date` date default NULL,
+  `reference` varchar(80) default NULL,
+  `prefered_payment` varchar(40) default NULL,
+  `booking_station` varchar(40) default NULL,
+  `prefered_transport` varchar(40) default NULL,
+  `terms_of_delivery` varchar(40) default NULL,
+  `discount_request` varchar(40) default NULL,
+  `status` enum('Temp','Open','Closed') NOT NULL default 'Temp',
+  `user_id` int(11) NOT NULL,
+  `last_update` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `spl_order_master`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `spl_order_tax_discount`
+--
+
+CREATE TABLE `spl_order_tax_discount` (
+  `id` int(11) NOT NULL auto_increment,
+  `order_id` int(11) NOT NULL,
+  `tax_discount_id` int(11) NOT NULL,
+  `type` enum('Discount','Tax') NOT NULL,
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `id` (`id`),
+  UNIQUE KEY `order_id_2` (`order_id`,`tax_discount_id`),
+  KEY `order_id` (`order_id`,`tax_discount_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `spl_order_tax_discount`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `spl_package_master`
+--
+
+CREATE TABLE `spl_package_master` (
+  `id` int(11) NOT NULL auto_increment,
+  `volume` float NOT NULL,
+  `unit_type` enum('ml','mg') NOT NULL default 'ml',
+  `quantity_in_box` int(11) NOT NULL,
+  `type` enum('Plastic','Glass','Gallon') NOT NULL default 'Plastic',
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `id` (`id`),
+  KEY `id_2` (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+
+--
+-- Dumping data for table `spl_package_master`
+--
+
+INSERT INTO `spl_package_master` VALUES(1, 500, 'ml', 24, 'Plastic');
+INSERT INTO `spl_package_master` VALUES(2, 100, 'ml', 50, 'Plastic');
+INSERT INTO `spl_package_master` VALUES(3, 1000, 'ml', 12, 'Plastic');
+INSERT INTO `spl_package_master` VALUES(4, 3000, 'ml', 4, 'Plastic');
+INSERT INTO `spl_package_master` VALUES(5, 500, 'ml', 15, 'Glass');
+INSERT INTO `spl_package_master` VALUES(6, 350, 'ml', 15, 'Glass');
+INSERT INTO `spl_package_master` VALUES(7, 400, 'ml', 15, 'Glass');
+INSERT INTO `spl_package_master` VALUES(8, 100, 'ml', 50, 'Glass');
+INSERT INTO `spl_package_master` VALUES(9, 5000, 'ml', 1, 'Gallon');
+INSERT INTO `spl_package_master` VALUES(10, 10000, 'ml', 1, 'Gallon');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `spl_price_master`
+--
+
+CREATE TABLE `spl_price_master` (
+  `id` int(11) NOT NULL auto_increment,
+  `product_id` int(11) NOT NULL,
+  `package_id` int(11) NOT NULL,
+  `customer_type` enum('Trade','Institutional','Government') NOT NULL,
+  `unit_price` float NOT NULL,
+  `mrp` float NOT NULL,
+  `status` tinyint(4) NOT NULL default '1',
+  `valid_from` date NOT NULL,
+  `valid_to` date NOT NULL,
+  `last_update` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=110 ;
+
+--
+-- Dumping data for table `spl_price_master`
+--
+
+INSERT INTO `spl_price_master` VALUES(10, 1, 1, 'Trade', 12, 24.48, 1, '2000-01-01', '2099-01-01', '2013-03-15 22:16:13');
+INSERT INTO `spl_price_master` VALUES(11, 2, 1, 'Trade', 18, 85, 1, '2000-01-01', '2099-01-01', '2013-03-15 22:16:59');
+INSERT INTO `spl_price_master` VALUES(12, 3, 2, 'Trade', 50, 12, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:12:29');
+INSERT INTO `spl_price_master` VALUES(13, 5, 1, 'Trade', 12, 24.63, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:08:42');
+INSERT INTO `spl_price_master` VALUES(14, 6, 1, 'Trade', 12, 22.49, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:08:15');
+INSERT INTO `spl_price_master` VALUES(15, 6, 2, 'Trade', 6, 12.69, 1, '2000-01-01', '2099-01-01', '2013-03-15 22:23:28');
+INSERT INTO `spl_price_master` VALUES(16, 6, 3, 'Trade', 18.6, 37.56, 1, '2000-01-01', '2099-01-01', '2013-03-15 22:23:54');
+INSERT INTO `spl_price_master` VALUES(17, 11, 1, 'Trade', 90, 13.7, 0, '2000-01-01', '2099-01-01', '2013-03-15 22:26:22');
+INSERT INTO `spl_price_master` VALUES(18, 11, 1, 'Trade', 90, 13.7, 0, '2000-01-01', '2099-01-01', '2013-03-20 23:15:08');
+INSERT INTO `spl_price_master` VALUES(19, 33, 2, 'Trade', 95, 26, 1, '2000-01-01', '2099-01-01', '2013-03-15 22:31:20');
+INSERT INTO `spl_price_master` VALUES(20, 33, 6, 'Trade', 155, 57, 0, '2000-01-01', '2099-01-01', '2013-03-15 22:35:27');
+INSERT INTO `spl_price_master` VALUES(21, 11, 5, 'Trade', 25.5, 110, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:20:30');
+INSERT INTO `spl_price_master` VALUES(22, 33, 6, 'Trade', 65, 175, 0, '2000-01-01', '2099-01-01', '2013-03-15 22:35:27');
+INSERT INTO `spl_price_master` VALUES(23, 33, 6, 'Trade', 65, 175, 1, '2000-01-01', '2099-01-01', '2013-03-15 22:35:27');
+INSERT INTO `spl_price_master` VALUES(24, 8, 8, 'Trade', 24, 65, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:21:31');
+INSERT INTO `spl_price_master` VALUES(25, 6, 8, 'Trade', 14.08, 9.75, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:27:45');
+INSERT INTO `spl_price_master` VALUES(26, 6, 5, 'Trade', 21, 26.39, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:18:18');
+INSERT INTO `spl_price_master` VALUES(27, 5, 5, 'Trade', 21, 28.51, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:16:40');
+INSERT INTO `spl_price_master` VALUES(28, 3, 8, 'Trade', 14, 55, 1, '2000-01-01', '2099-01-01', '2013-03-15 22:39:02');
+INSERT INTO `spl_price_master` VALUES(29, 2, 5, 'Trade', 29, 90, 0, '2000-01-01', '2099-01-01', '2013-03-15 22:40:56');
+INSERT INTO `spl_price_master` VALUES(30, 2, 5, 'Trade', 29, 90, 1, '2000-01-01', '2099-01-01', '2013-03-15 22:40:56');
+INSERT INTO `spl_price_master` VALUES(31, 1, 5, 'Trade', 21, 28.37, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:18:53');
+INSERT INTO `spl_price_master` VALUES(32, 33, 8, 'Trade', 46.5, 120, 1, '2000-01-01', '2099-01-01', '2013-03-15 22:46:59');
+INSERT INTO `spl_price_master` VALUES(33, 1, 1, 'Institutional', 13.25, 24.48, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:25:44');
+INSERT INTO `spl_price_master` VALUES(34, 2, 1, 'Institutional', 28.75, 85, 1, '2000-01-01', '2099-01-01', '2013-03-15 22:48:28');
+INSERT INTO `spl_price_master` VALUES(35, 3, 2, 'Institutional', 15.75, 50, 1, '2000-01-01', '2099-01-01', '2013-03-15 22:49:02');
+INSERT INTO `spl_price_master` VALUES(36, 5, 1, 'Institutional', 13.25, 24.63, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:22:32');
+INSERT INTO `spl_price_master` VALUES(37, 6, 1, 'Institutional', 13.25, 22.49, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:25:11');
+INSERT INTO `spl_price_master` VALUES(38, 6, 2, 'Institutional', 9.5, 12.69, 1, '2000-01-01', '2099-01-01', '2013-03-15 22:51:01');
+INSERT INTO `spl_price_master` VALUES(39, 6, 3, 'Institutional', 27, 37.56, 1, '2000-01-01', '2099-01-01', '2013-03-15 22:51:32');
+INSERT INTO `spl_price_master` VALUES(40, 11, 1, 'Institutional', 19.75, 90, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:28:59');
+INSERT INTO `spl_price_master` VALUES(41, 33, 2, 'Institutional', 36.4, 95, 1, '2000-01-01', '2099-01-01', '2013-03-15 22:52:42');
+INSERT INTO `spl_price_master` VALUES(42, 1, 5, 'Institutional', 22.75, 28.37, 1, '2000-01-01', '2099-01-01', '2013-03-15 22:53:15');
+INSERT INTO `spl_price_master` VALUES(43, 2, 5, 'Institutional', 32.5, 90, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:55:59');
+INSERT INTO `spl_price_master` VALUES(44, 3, 8, 'Institutional', 17, 55, 1, '2000-01-01', '2099-01-01', '2013-03-15 22:54:21');
+INSERT INTO `spl_price_master` VALUES(45, 5, 5, 'Institutional', 22.75, 28.51, 1, '2000-01-01', '2099-01-01', '2013-03-15 22:55:22');
+INSERT INTO `spl_price_master` VALUES(46, 6, 5, 'Institutional', 22.75, 26.39, 1, '2000-01-01', '2099-01-01', '2013-03-15 22:55:49');
+INSERT INTO `spl_price_master` VALUES(47, 6, 8, 'Institutional', 11, 14.08, 1, '2000-01-01', '2099-01-01', '2013-03-15 22:56:17');
+INSERT INTO `spl_price_master` VALUES(48, 8, 8, 'Institutional', 28.5, 65, 1, '2000-01-01', '2099-01-01', '2013-03-15 22:56:59');
+INSERT INTO `spl_price_master` VALUES(49, 11, 5, 'Institutional', 32.5, 110, 1, '2000-01-01', '2099-01-01', '2013-03-15 22:57:39');
+INSERT INTO `spl_price_master` VALUES(50, 33, 6, 'Institutional', 88, 175, 1, '2000-01-01', '2099-01-01', '2013-03-15 22:58:13');
+INSERT INTO `spl_price_master` VALUES(51, 33, 8, 'Institutional', 46.5, 120, 1, '2000-01-01', '2099-01-01', '2013-03-15 22:58:43');
+INSERT INTO `spl_price_master` VALUES(52, 11, 1, 'Trade', 13.7, 90, 1, '2000-01-01', '2099-01-01', '2013-03-20 23:15:08');
+INSERT INTO `spl_price_master` VALUES(53, 1, 8, 'Trade', 8, 10, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:19:20');
+INSERT INTO `spl_price_master` VALUES(54, 8, 6, 'Trade', 25, 65, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:21:14');
+INSERT INTO `spl_price_master` VALUES(55, 3, 1, 'Trade', 15, 85, 1, '2000-01-01', '2099-01-01', '2013-04-17 01:05:46');
+INSERT INTO `spl_price_master` VALUES(56, 4, 2, 'Trade', 50, 12, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:06:47');
+INSERT INTO `spl_price_master` VALUES(57, 4, 2, 'Trade', 50, 12, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:09:44');
+INSERT INTO `spl_price_master` VALUES(58, 6, 1, 'Trade', 12, 24.63, 1, '2000-01-01', '2099-01-01', '2013-04-17 01:08:15');
+INSERT INTO `spl_price_master` VALUES(59, 5, 1, 'Trade', 12, 24.48, 1, '2000-01-01', '2099-01-01', '2013-04-17 01:08:42');
+INSERT INTO `spl_price_master` VALUES(60, 4, 2, 'Trade', 50, 12, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:31:28');
+INSERT INTO `spl_price_master` VALUES(61, 1, 2, 'Trade', 12.69, 6, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:11:53');
+INSERT INTO `spl_price_master` VALUES(62, 1, 2, 'Trade', 12.69, 6, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:31:55');
+INSERT INTO `spl_price_master` VALUES(63, 3, 2, 'Trade', 12, 50, 1, '2000-01-01', '2099-01-01', '2013-04-17 01:12:29');
+INSERT INTO `spl_price_master` VALUES(64, 8, 2, 'Trade', 95, 26, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:46:48');
+INSERT INTO `spl_price_master` VALUES(65, 1, 3, 'Trade', 37.56, 18.6, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:47:39');
+INSERT INTO `spl_price_master` VALUES(66, 5, 5, 'Trade', 28.37, 21, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:48:24');
+INSERT INTO `spl_price_master` VALUES(67, 3, 5, 'Trade', 90, 25, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:48:51');
+INSERT INTO `spl_price_master` VALUES(68, 4, 8, 'Trade', 55, 14, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:49:31');
+INSERT INTO `spl_price_master` VALUES(69, 6, 5, 'Trade', 28.51, 21, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:50:15');
+INSERT INTO `spl_price_master` VALUES(70, 1, 5, 'Trade', 26.39, 21, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:51:03');
+INSERT INTO `spl_price_master` VALUES(71, 1, 8, 'Trade', 14.08, 9.75, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:51:26');
+INSERT INTO `spl_price_master` VALUES(72, 10, 8, 'Trade', 65, 24, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:51:49');
+INSERT INTO `spl_price_master` VALUES(73, 11, 5, 'Trade', 110, 25.5, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:52:18');
+INSERT INTO `spl_price_master` VALUES(74, 8, 6, 'Trade', 175, 65, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:52:50');
+INSERT INTO `spl_price_master` VALUES(75, 8, 8, 'Trade', 120, 35, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:53:34');
+INSERT INTO `spl_price_master` VALUES(76, 5, 1, 'Institutional', 24.48, 13.25, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:57:14');
+INSERT INTO `spl_price_master` VALUES(77, 3, 1, 'Institutional', 85, 28.75, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:57:47');
+INSERT INTO `spl_price_master` VALUES(78, 4, 2, 'Institutional', 50, 15.75, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:23:52');
+INSERT INTO `spl_price_master` VALUES(79, 4, 2, 'Institutional', 50, 16.75, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:24:32');
+INSERT INTO `spl_price_master` VALUES(80, 4, 2, 'Institutional', 50, 15.75, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:58:57');
+INSERT INTO `spl_price_master` VALUES(81, 6, 1, 'Institutional', 24.63, 13.25, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:59:30');
+INSERT INTO `spl_price_master` VALUES(82, 1, 1, 'Institutional', 22.49, 13.25, 0, '2000-01-01', '2099-01-01', '2013-04-17 01:59:58');
+INSERT INTO `spl_price_master` VALUES(83, 1, 2, 'Institutional', 12.69, 9.5, 0, '2000-01-01', '2099-01-01', '2013-04-17 02:00:31');
+INSERT INTO `spl_price_master` VALUES(84, 1, 3, 'Institutional', 37.56, 27, 0, '2000-01-01', '2099-01-01', '2013-04-17 02:00:58');
+INSERT INTO `spl_price_master` VALUES(85, 6, 8, 'Trade', 9.75, 14.08, 1, '2000-01-01', '2099-01-01', '2013-04-17 01:27:45');
+INSERT INTO `spl_price_master` VALUES(86, 11, 1, 'Institutional', 37.56, 27, 0, '2000-01-01', '2099-01-01', '2013-04-17 02:01:32');
+INSERT INTO `spl_price_master` VALUES(87, 4, 2, 'Trade', 12, 50, 1, '2000-01-01', '2099-01-01', '2013-04-17 01:31:28');
+INSERT INTO `spl_price_master` VALUES(88, 1, 2, 'Trade', 6, 12.69, 1, '2000-01-01', '2099-01-01', '2013-04-17 01:31:55');
+INSERT INTO `spl_price_master` VALUES(89, 8, 2, 'Trade', 26, 95, 1, '2000-01-01', '2099-01-01', '2013-04-17 01:46:48');
+INSERT INTO `spl_price_master` VALUES(90, 1, 3, 'Trade', 18.6, 37.56, 1, '2000-01-01', '2099-01-01', '2013-04-17 01:47:39');
+INSERT INTO `spl_price_master` VALUES(91, 5, 5, 'Trade', 21, 28.37, 1, '2000-01-01', '2099-01-01', '2013-04-17 01:48:24');
+INSERT INTO `spl_price_master` VALUES(92, 3, 5, 'Trade', 25, 90, 1, '2000-01-01', '2099-01-01', '2013-04-17 01:48:51');
+INSERT INTO `spl_price_master` VALUES(93, 4, 8, 'Trade', 14, 55, 1, '2000-01-01', '2099-01-01', '2013-04-17 01:49:31');
+INSERT INTO `spl_price_master` VALUES(94, 6, 5, 'Trade', 21, 28.51, 1, '2000-01-01', '2099-01-01', '2013-04-17 01:50:15');
+INSERT INTO `spl_price_master` VALUES(95, 1, 5, 'Trade', 21, 26.39, 1, '2000-01-01', '2099-01-01', '2013-04-17 01:51:03');
+INSERT INTO `spl_price_master` VALUES(96, 1, 8, 'Trade', 9.75, 14.08, 1, '2000-01-01', '2099-01-01', '2013-04-17 01:51:26');
+INSERT INTO `spl_price_master` VALUES(97, 10, 8, 'Trade', 24, 65, 1, '2000-01-01', '2099-01-01', '2013-04-17 01:51:49');
+INSERT INTO `spl_price_master` VALUES(98, 11, 5, 'Trade', 25.5, 110, 1, '2000-01-01', '2099-01-01', '2013-04-17 01:52:18');
+INSERT INTO `spl_price_master` VALUES(99, 8, 6, 'Trade', 65, 175, 1, '2000-01-01', '2099-01-01', '2013-04-17 01:52:50');
+INSERT INTO `spl_price_master` VALUES(100, 8, 8, 'Trade', 35, 120, 1, '2000-01-01', '2099-01-01', '2013-04-17 01:53:34');
+INSERT INTO `spl_price_master` VALUES(101, 2, 5, 'Institutional', 30.5, 90, 1, '2000-01-01', '2099-01-01', '2013-04-17 01:55:59');
+INSERT INTO `spl_price_master` VALUES(102, 5, 1, 'Institutional', 13.25, 24.48, 1, '2000-01-01', '2099-01-01', '2013-04-17 01:57:14');
+INSERT INTO `spl_price_master` VALUES(103, 3, 1, 'Institutional', 28.75, 85, 1, '2000-01-01', '2099-01-01', '2013-04-17 01:57:47');
+INSERT INTO `spl_price_master` VALUES(104, 4, 2, 'Institutional', 15.75, 50, 1, '2000-01-01', '2099-01-01', '2013-04-17 01:58:57');
+INSERT INTO `spl_price_master` VALUES(105, 6, 1, 'Institutional', 13.25, 24.63, 1, '2000-01-01', '2099-01-01', '2013-04-17 01:59:30');
+INSERT INTO `spl_price_master` VALUES(106, 1, 1, 'Institutional', 13.25, 22.49, 1, '2000-01-01', '2099-01-01', '2013-04-17 01:59:58');
+INSERT INTO `spl_price_master` VALUES(107, 1, 2, 'Institutional', 9.5, 12.69, 1, '2000-01-01', '2099-01-01', '2013-04-17 02:00:31');
+INSERT INTO `spl_price_master` VALUES(108, 1, 3, 'Institutional', 27, 37.56, 1, '2000-01-01', '2099-01-01', '2013-04-17 02:00:58');
+INSERT INTO `spl_price_master` VALUES(109, 11, 1, 'Institutional', 27, 37.56, 1, '2000-01-01', '2099-01-01', '2013-04-17 02:01:32');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `spl_product_master`
+--
+
+CREATE TABLE `spl_product_master` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(80) NOT NULL,
+  `short_code` varchar(80) NOT NULL,
+  `type` varchar(80) NOT NULL,
+  `unit` enum('ml','mg') NOT NULL default 'ml',
+  `status` tinyint(4) NOT NULL default '1',
+  `last_update` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
+
+--
+-- Dumping data for table `spl_product_master`
+--
+
+INSERT INTO `spl_product_master` VALUES(1, 'Sodium Chloride Inj. IP 0.9%', 'NS', 'Irrigation and dialysis solutions', 'ml', 1, '2013-03-29 14:11:36');
+INSERT INTO `spl_product_master` VALUES(2, '1.5 % Glycine I.P.', 'Glycine-IP 1.5%', 'Irrigation and dialysis solutions', 'ml', 1, '2013-03-29 14:11:36');
+INSERT INTO `spl_product_master` VALUES(3, 'Dextrose Inj. IP 10%', 'D10', 'Carbohydrates & Sodium chloride', 'ml', 1, '2013-03-29 14:11:36');
+INSERT INTO `spl_product_master` VALUES(4, 'Dextrose Inj. IP 25%', 'D25', 'Carbohydrates & Sodium chloride', 'ml', 1, '2013-03-29 14:11:36');
+INSERT INTO `spl_product_master` VALUES(5, 'Dextrose Inj. IP 5%', 'D5', 'Carbohydrates & Sodium chloride', 'ml', 1, '2013-03-29 14:11:36');
+INSERT INTO `spl_product_master` VALUES(6, 'Sodium Chloride & Dextrose Inj. IP', 'DNS', 'Carbohydrates & Sodium chloride', 'ml', 1, '2013-03-29 14:11:36');
+INSERT INTO `spl_product_master` VALUES(7, 'Haemodialysis Concentrate BP', 'Haemodialysis Concentrate BP', 'Irrigation and dialysis solutions', 'ml', 1, '2013-03-29 14:11:36');
+INSERT INTO `spl_product_master` VALUES(8, 'Mannitol Inj. IP 20%', 'Manitol', 'Osmotic diuretics', 'ml', 1, '2013-03-29 14:11:36');
+INSERT INTO `spl_product_master` VALUES(9, 'Sodium Chloride 0.45% & Dextrose 2.5% Inj. IP', 'HDNS', 'Carbohydrates & Sodium chloride', 'ml', 1, '2013-03-29 14:11:36');
+INSERT INTO `spl_product_master` VALUES(10, 'Sodium Chloride Inj. USP 3%', 'NS 3%', 'Carbohydrates & Sodium chloride', 'ml', 1, '2013-03-29 14:11:36');
+INSERT INTO `spl_product_master` VALUES(11, 'Compound Sodium Lactate Inj. IP (Ringer Lactate)', 'RL', 'Multiple electrolytes', 'ml', 1, '2013-03-29 14:11:36');
+INSERT INTO `spl_product_master` VALUES(12, 'SP - Lyte M', 'SP - Lyte M', 'Multiple electrolytes', 'ml', 1, '2013-03-29 14:11:36');
+INSERT INTO `spl_product_master` VALUES(13, 'SP - Lyte P', 'SP - Lyte P', 'Multiple electrolytes', 'ml', 1, '2013-03-29 14:11:36');
+INSERT INTO `spl_product_master` VALUES(14, 'Invert Sugar 10% in Water', 'SP - Vert', 'Carbohydrates & Sodium chloride', 'ml', 1, '2013-03-29 14:11:36');
+INSERT INTO `spl_product_master` VALUES(15, 'Invert Sugar 10% in Saline', 'SP - Vert S', 'Carbohydrates & Sodium chloride', 'ml', 1, '2013-03-29 14:11:36');
+INSERT INTO `spl_product_master` VALUES(16, 'SP Tinol  (Tinidazol)', 'SP-Tinol', 'Antibiotics and others', 'ml', 1, '2013-03-29 14:11:36');
+INSERT INTO `spl_product_master` VALUES(17, 'Metronidazole Inj. IP  (SP - Gyl)', 'SP-Gyl', 'Antibiotics and others', 'ml', 1, '2013-03-29 14:11:36');
+INSERT INTO `spl_product_master` VALUES(18, 'Ciprofloxicine Inj. IP  (SP - Cipro)', 'SP-Cipro', 'Antibiotics and others', 'ml', 1, '2013-03-29 14:11:36');
+INSERT INTO `spl_product_master` VALUES(19, 'Ofloxacin Inj. IP  ', 'SP-Flox', 'Antibiotics and others', 'ml', 1, '2013-03-29 14:11:36');
+INSERT INTO `spl_product_master` VALUES(20, 'SP - Lyte G', 'SP - Lyte G', 'Multiple electrolytes', 'ml', 1, '2013-03-29 14:11:36');
+INSERT INTO `spl_product_master` VALUES(21, 'SP - Lyte E', 'SP - Lyte E', 'Multiple electrolytes', 'ml', 1, '2013-03-29 14:11:36');
+INSERT INTO `spl_product_master` VALUES(22, 'Mannitol Inj. IP 10% with Glycerin 10 gm ', 'SP-Tol G', 'Osmotic diuretics', 'ml', 1, '2013-03-29 14:11:36');
+INSERT INTO `spl_product_master` VALUES(23, 'Sterile Water IP', 'Sterile Water IP', 'Irrigation and dialysis solutions', 'ml', 1, '2013-03-29 14:11:36');
+INSERT INTO `spl_product_master` VALUES(24, 'Sodium Chloride Inj. 100 ml', 'NS 100 ml', '100 ml Glass (50Nos of Box)', 'ml', 1, '2013-04-12 22:21:59');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `spl_sale_ledger`
+--
+
+CREATE TABLE `spl_sale_ledger` (
+  `id` int(11) NOT NULL auto_increment,
+  `order_id` int(11) NOT NULL,
+  `customer_id` int(11) NOT NULL,
+  `total_amount` float NOT NULL,
+  `discount_amount` float NOT NULL,
+  `tax_amount` float NOT NULL,
+  `round_off` float NOT NULL,
+  `bill_amount` float NOT NULL,
+  `cumulative_bill_amount` float NOT NULL,
+  `last_update` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `spl_sale_ledger`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `spl_stn_master`
+--
+
+CREATE TABLE `spl_stn_master` (
+  `id` int(11) NOT NULL auto_increment,
+  `despatch_no` varchar(40) NOT NULL,
+  `despatch_date` date NOT NULL,
+  `despatch_through` varchar(40) NOT NULL,
+  `devilery_terms` varchar(40) NOT NULL,
+  `destination` varchar(40) NOT NULL,
+  `stn_date` date NOT NULL,
+  `sta_no` varchar(40) NOT NULL,
+  `vehicle_no` varchar(40) NOT NULL,
+  `status` enum('Open','Closed') NOT NULL default 'Open',
+  `user_id` int(11) NOT NULL,
+  `last_update` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `spl_stn_master`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `spl_stock_ledger`
+--
+
+CREATE TABLE `spl_stock_ledger` (
+  `id` int(11) NOT NULL auto_increment,
+  `product_id` int(11) NOT NULL,
+  `package_id` int(11) NOT NULL,
+  `mfg_date` date NOT NULL,
+  `exp_date` varchar(40) NOT NULL,
+  `batch_id` enum('L','S') NOT NULL default 'L',
+  `batch_no` int(4) unsigned zerofill NOT NULL,
+  `location` varchar(40) NOT NULL,
+  `transaction_date` date NOT NULL,
+  `transaction_reference_no` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `transaction_type` enum('Production','Sale','Transfer-in','Transfer-out','Transfer-pending') NOT NULL,
+  `remarks` varchar(80) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `last_update` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `spl_stock_ledger`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `spl_stock_master`
+--
+
+CREATE TABLE `spl_stock_master` (
+  `id` int(11) NOT NULL auto_increment,
+  `product_id` int(11) NOT NULL,
+  `package_id` int(11) NOT NULL,
+  `available_unit` int(11) NOT NULL,
+  `mfg_date` date NOT NULL,
+  `exp_date` varchar(40) NOT NULL,
+  `batch_id` enum('L','S') NOT NULL default 'L',
+  `batch_no` int(4) unsigned zerofill NOT NULL,
+  `location` varchar(80) NOT NULL,
+  `transaction_type` enum('Production','Sale','Transfer-in','Transfer-out','Transfer-pending') NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `last_update` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `spl_stock_master`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `spl_tax_master`
+--
+
+CREATE TABLE `spl_tax_master` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(40) NOT NULL,
+  `catagory` varchar(40) NOT NULL,
+  `percentage` float NOT NULL,
+  `status` tinyint(4) NOT NULL default '1',
+  `valid_from` date NOT NULL,
+  `valid_to` date NOT NULL,
+  `last_update` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2001 ;
+
+--
+-- Dumping data for table `spl_tax_master`
+--
+
+INSERT INTO `spl_tax_master` VALUES(1000, 'Add, Output VAT@5%', 'Government', 5, 1, '2000-01-01', '2013-02-28', '2013-04-24 13:10:23');
+INSERT INTO `spl_tax_master` VALUES(2000, 'Add, 2 % CST against C Form', 'CST intra state', 2, 1, '0000-00-00', '0000-00-00', '2013-04-03 12:41:15');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `spl_user_master`
+--
+
+CREATE TABLE `spl_user_master` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(80) NOT NULL,
+  `email` varchar(80) NOT NULL,
+  `mobile` varchar(40) NOT NULL,
+  `password` varchar(80) NOT NULL,
+  `role` enum('admin','user') NOT NULL default 'admin',
+  `status` tinyint(2) NOT NULL,
+  `last_update` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `spl_user_master`
+--
+
+INSERT INTO `spl_user_master` VALUES(1, 'Administrator', 'admin@glomindz.com', '9854087006', '88f2dccb02b2a20615211e5492f85204', 'admin', 1, '2013-02-27 13:23:10');

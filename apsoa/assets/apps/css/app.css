@@ -1,0 +1,39 @@
+/*** app.css ***/
+
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+body {
+  padding-top: 50px;
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -40px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  	margin-top: 14px;
+}
+
+#foot{
+	background: #101010;
+	margin: 0 auto;
+	width: 100%;
+	position: fixed;
+}
+
+.credit{
+	font-size: 12px;
+}

@@ -1,0 +1,77 @@
+#topography{
+	display: inline-block; margin-bottom: 0px; width: 215px; height: 25px;
+}
+#gen_info_forest{
+	display: inline-block; margin-bottom: 0px; width: 215px; height: 25px;
+}
+#loding_map{
+	background-image: url("../img/loading.gif");
+	height: 40px;
+    width: 40px;
+    margin-top: 150px; 
+    margin-left: 400px;
+}
+#data_loading{
+	margin-right: 70px; display: none; margin-bottom: 0px; margin-top: -5px;
+}
+.pro_tb{
+border-left: medium solid rgb(99, 111, 124); 
+height: 25px; 
+margin-bottom: 0px;
+margin-left: 20px;
+padding-left: 10px;
+}
+
+#name_row{margin-top: -20px;}
+
+.info_box{
+	background-color:#e2eddd;
+}
+.black{
+	color:#333333;
+}
+.yes{
+    background-image: url("../img/yes_no.png");
+    background-position: 50px 4px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 20px;
+    line-height: 14px;
+    margin-top: 1px;
+    vertical-align: text-top;
+    width: 70px;
+}
+.no{
+    background-image: url("../img/yes_no.png");
+    background-position: -24px 0;
+    background-repeat: no-repeat;
+    display: inline-block;
+    line-height: 14px;
+    margin-top: 1px;
+    vertical-align: text-top;
+    height: 20px; width: 50px; 
+    margin-left: 50px;
+}
+
+.dist_dropdown{
+	 float: left;
+    width: 170px;
+}
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+	 background-color: #474245;
+	 color: #ffffff;
+}
+
+.container{
+width: 940px;
+padding:30px;
+}
+
+@media print{
+    table { page-break-inside:auto }
+    tr    { page-break-inside:avoid; page-break-after:auto }
+    thead { display:table-header-group }
+    tfoot { display:table-footer-group }
+}

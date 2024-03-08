@@ -1,0 +1,60 @@
+-- phpMyAdmin SQL Dump
+-- version 3.5.2.2
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Nov 25, 2013 at 08:16 AM
+-- Server version: 5.5.27
+-- PHP Version: 5.4.7
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `newcrimatrix`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `crimatrix_arrested_criminal_profile`
+--
+
+CREATE TABLE IF NOT EXISTS `crimatrix_arrested_criminal_profile` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(40) NOT NULL,
+  `father_name` varchar(40) NOT NULL,
+  `mobile_nos` varchar(40) NOT NULL,
+  `crime_type_id` int(11) NOT NULL,
+  `case_ref_no` varchar(40) NOT NULL,
+  `crime_type` varchar(40) NOT NULL,
+  `police_station` varchar(40) NOT NULL,
+  `remarks` text NOT NULL,
+  `address` varchar(40) NOT NULL,
+  `ps_id` int(11) NOT NULL,
+  `arested_date` varchar(40) NOT NULL,
+  `longitude` float NOT NULL,
+  `latitude` float NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `photo` longblob NOT NULL,
+  `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+
+--
+-- Table structure for table `crimatrix_sms_user_master`
+--
+
+CREATE TABLE IF NOT EXISTS `crimatrix_sms_user_master` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(40) NOT NULL,
+  `mobile` varchar(10) NOT NULL,
+  `designation` varchar(80) NOT NULL,
+  `ps_id` int(11) NOT NULL,
+  `city_id` int(11) NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '0',
+  `last_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;

@@ -1,0 +1,3 @@
+40	1	*	*	*	wget http://enterprise.crimatrix.com/hotel/cron/submittedhotels
+ 0	2	*	*	*	wget http://enterprise.crimatrix.com/hotel/cron/removephoto
+10	0	*	*	*	wget http://enterprise.crimatrix.com/hotel/cron/stats

@@ -1,0 +1,408 @@
+@font-face{
+	font-family: Roboto-Black;
+	src: url('font/Roboto-Black.ttf');
+}
+@font-face{
+	font-family: Roboto-Regular;
+	src: url('font/Roboto-Regular.ttf');
+	font-style: normal;
+}
+@font-face{
+	font-family: Roboto-Italic;
+	src: url('font/Roboto-Italic.ttf');
+	font-style: normal;
+	font-style: italic;
+}
+body {
+	padding-bottom: 0;
+	padding-top: 0;
+	overflow-x: hidden;
+}
+.pad{
+	height: 30px;
+}
+.container-fluid{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#section1{
+	background-color:#000;
+	background-image: url("../img/home_bg.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+#section2{
+	background-color:#000;
+	background-image: url("../img/vehicle-theft.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+#section3{
+	background-color:#000;
+	background-image: url("../img/guestlist.png");
+	background-repeat: no-repeat;
+	background-size: 100%;	
+}
+#section4{
+	background-color:#000;
+	background-image: url("../img/criminalrecords.png");
+	background-repeat: no-repeat;
+	background-size: 100%;		
+}
+#section5{
+	background-color:#000;
+	background-image: url("../img/bg-pattern.png");
+}
+#section6{
+	background-color:#000;
+	background-image: url("../img/bg-pattern-contact.png");
+}
+
+#section4 p{
+	padding-left: 50px;
+}
+
+.section{
+    margin:0px;
+    height:700px;
+    width:100%;
+    float:left;
+    padding-left: 40px;
+	padding-right: 40px;
+}
+
+#sign_in_div{
+	background: #fff;
+	border-radius: 0;
+}
+
+.row{
+	 margin:30px 0px 20px 50px;
+}
+.red_bg{
+	background-color: #cc0000;
+}
+.red_text_color{
+	color: #cc0000;
+}
+.content{
+	width: 86%;
+	margin-left: 3.5%;
+	margin-top: 64px;
+	color: #fff;
+}
+
+h1{
+	font-family:Roboto-Black;
+}
+h3{
+	font-family: Roboto-Regular;
+	font-weight: normal;
+}
+#panel_home{
+	background-color:rgba(0,0,0,0.5);
+	width: 100%;
+	height: 250px;
+}
+
+#panel_home_p{
+	font-family: Roboto-Regular;
+	font-weight: normal;
+	text-align: justify;
+	color:#fff;
+	font-size: 22px;
+	padding: 25px;
+	padding-bottom: 5px;
+	padding-bottom: 5px;
+	line-height: 1.2;
+}
+
+.p_nornal_small{
+	font-family: Roboto-Regular;
+	font-weight: normal;
+	text-align: justify;
+	color:#fff;
+	font-size: 18px;
+	padding: 25px;
+	padding-bottom: 5px;
+	padding-top: 15px;
+}
+#home_down_div{
+	margin-top: 100px;
+}
+.css_logo{
+	font-size: 4em;
+	font-weight: bolder;
+}
+#css_logo_last_part{
+	float: left; 
+	margin-left: 15px; 
+	margin-top: -20px;
+}
+.red_dot{
+	width: 15px;
+	height: 15px;
+	background: #cc0000;
+	float: left;
+	margin-left: 32px;
+	border-radius: 50px;
+	margin-top: -12px;
+}
+#home_crime_btn{
+	float: left;
+	margin-left: 50px;
+	margin-top: -25px;
+	width: 400px;
+	height: 40px;
+	background: #cc0000;
+	border: 0;
+	text-align: left;
+	font-size: 1.9em;
+	color: #fff;
+}
+
+#next_btn_a_img{
+	float: right;
+	margin-top: -20px;
+}
+
+.btn_next_desktop_img{
+	margin-top: 10px;
+}
+
+
+
+#panel_citizen{
+	background-color:rgba(0,0,0,0.7);
+	width: 100%;
+	height: 360px;
+}
+#panel_citizen_r_div{
+	width: 50%;
+	height: 100%;
+	float: left;
+	background-color: rgba(0,0,0,0.7);
+	border: 1px solid rgb(51, 50, 50);
+	border-right: 0px;
+}
+
+.panel_citizen_r_div_p{
+	margin: 20px 20px 20px 20px;
+	font-size: 14px;
+	font-family: Roboto-Regular;
+	padding-bottom: 8px;
+	text-align: justify;
+}
+
+#panel_citizen_l_div{
+	width: 49.7%;
+	height: 100%;
+	background-color: rgba(252,0,0,0.7);
+	float: right;
+	border: 1px solid rgb(51, 50, 50);
+	border-left: 0px;
+}
+
+.sms_lable{
+	font-family: Roboto-Regular;
+	margin-left: 20px;
+	margin-top: 10px;
+	font-weight: bold; 
+	background: #000; 
+	text-indent: 10px; 
+	height: 30px; 
+	line-height: 2.2; 
+	color: rgb(207, 0, 0);
+}
+
+.lable_margin{
+	font-family: Roboto-Regular;
+	margin-left: 20px;
+}
+.eg_sms{
+	font-size: 12px;
+	color: rgb(0, 0, 0);
+}
+
+
+
+#sarai_info{
+	font-family: Roboto-Italic;
+	font-style: italic;
+	font-weight: normal;
+	line-height: 1.2;
+}
+
+#panel_hotel_div{
+	width:60%;
+	float:left;
+	background-color:rgba(0,0,0,0.7);
+	float:left;
+	padding:30px;
+	margin-top: 40px;
+	margin-bottom: 10px;
+	border: 1px solid rgb(26, 26, 26);
+}
+#panel_hotel_signup{
+	background-color:#cc0000;
+	float:left;
+	padding:20px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	border: 1px solid rgb(26, 26, 26);
+}
+
+.sarai_details{
+	margin-right: 20px;
+	font-family: Roboto-Regular;
+	font-size: 14px;
+	text-align: justify;
+}
+#hotel_show_sign_up_btn{
+	font-family: Roboto-Regular;
+	width: 97%;
+	height: 40px;
+	background: #cc0000;
+	border: 0px;
+	margin-left: 20px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 2em;
+}
+
+#panel_police_div{
+	background-color:rgba(0,0,0,0.7);
+	width: 100%;
+	height: 350px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 1px solid rgb(26, 26, 26);
+}
+
+#police_info{
+	font-family: Roboto-Regular;
+	font-size: 12px;
+	text-align:justify;
+	width: 60%;
+	margin: 20px;
+	float: left;
+}
+#criminal_slideshow{
+	width: 33%;
+	height: 100%;
+	float: right;
+}
+#police_show_sign_up_btn{
+	font-family: Roboto-Regular;
+	width: 50%;
+	height: 40px;
+	background: #cc0000;
+	border: 0px;
+	margin-top: 150px;
+	margin-left: 20px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 2em;
+}
+
+.black_text{
+	color: #000000 !important;
+}
+
+
+#police_sign_up_div{
+	background-color: #fff;
+	display: none;
+	width: 100%;
+	height: 350px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 1px solid rgb(26, 26, 26);
+}
+#police_sign_up_form{
+	margin-left: 35%;
+	margin-top: 10px;
+}
+
+#hotel_sign_up_result{
+	display: none;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 50px;
+}
+
+#police_sign_up_btn{
+	margin-left: 0;
+	font-size: 1.5em;
+	color: #fff;
+	font-weight: bold;
+}
+
+#hotel_sign_up_div{
+	display: none;
+	background-color: #fff;
+	width: 100%;
+	height: 310px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 1px solid rgb(26, 26, 26);
+}
+
+#hotel_sign_up_form{
+}
+
+#hotel_sign_up_btn{
+	margin-left: 0;
+	font-size: 1.5em;
+	color: #fff;
+	font-weight: bold;
+}
+
+#police_sign_up_result{
+	display: none;
+	margin-left: 20%;
+	margin-right: 20%;
+	margin-top: 50px;
+}
+.about{
+	float:left;
+}
+.logos{
+	float:right;
+}
+.glomindz-logo{
+	margin-top:50px;
+}
+
+.home_about_p_q{
+	font-family: Roboto-Regular;
+	font-size: 18px;
+}
+.home_about_p_ans{
+	font-family: Roboto-Regular;
+	font-size: 14px;
+}
+
+#about_next_section_img{
+	position: absolute;
+	margin-left: 500px;
+	margin-top: 350px;	
+}
+
+.glomindz_text_color{
+	color: #99cc33;
+}
+
+#contact_form{
+	margin-top: 10px;
+}
+
+#hrsignup{
+	border-top: 1px solid #9E3636;
+	border-bottom: 1px solid #DA1717;
+}
+#contact_msg{
+	display: none;
+	width: 540px;
+}

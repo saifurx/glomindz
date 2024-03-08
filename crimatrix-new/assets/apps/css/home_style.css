@@ -1,0 +1,209 @@
+@font-face{
+	font-family: Roboto-Black;
+	src: url('font/Roboto-Black.ttf');
+}
+@font-face{
+	font-family: Roboto-Regular;
+	src: url('font/Roboto-Regular.ttf');
+	font-style: normal;
+}
+@font-face{
+	font-family: Roboto-Italic;
+	src: url('font/Roboto-Italic.ttf');
+	font-style: normal;
+	font-style: italic;
+}
+
+body{
+	overflow: hidden;
+}
+
+.row,#navContainer{
+	margin-left: 60px;
+	margin-right: 60px;
+	color: #fff;
+}
+
+#ContainerforHome,
+#ContainerforCitizen,
+#ContainerforHotel,
+#ContainerforPolice,
+#ContainerforAbout,
+#ContainerforContact{
+	height: 650px;
+	display: none; 
+}
+
+#ContainerforHome{
+	background-color:#000;
+	background-image: url("../img/home_bg.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+#ContainerforCitizen{
+	background-color:#000;
+	background-image: url("../img/vehicle-theft.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+#ContainerforHotel{
+	background-color:#000;
+	background-image: url("../img/guestlist.png");
+	background-repeat: no-repeat;
+	background-size: 100%;	
+}
+
+#ContainerforPolice{
+	background-color:#000;
+	background-image: url("../img/criminalrecords.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+#ContainerforAbout{
+	background-color:#000;
+	background-image: url("../img/bg-pattern.png");
+}
+
+#ContainerforContact{
+	background-color:#000;
+	background-image: url("../img/bg-pattern-contact.png");
+}
+
+.navbar-default .navbar-nav > li > a {
+	line-height: 3.5;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  line-height: 3.5;
+}
+
+h1{
+	font-family:Roboto-Black;
+}
+h3{
+	font-family: Roboto-Regular;
+	font-weight: normal;
+}
+
+.red_text_color {
+	color: #cc0000;
+}
+
+#panel_home {
+	background-color: rgba(0,0,0,0.5);
+	
+}
+#panel_home_p{
+	font-family: Roboto-Regular;
+	font-weight: normal;
+	text-align: justify;
+	color:#fff;
+	font-size: 22px;
+	padding: 25px;
+	padding-bottom: 5px;
+	padding-top: 15px;
+}
+.p_nornal_small{
+	font-family: Roboto-Regular;
+	font-weight: normal;
+	text-align: justify;
+	color:#fff;
+	font-size: 18px;
+	padding: 25px;
+	padding-bottom: 5px;
+	padding-top: 15px;
+}
+
+#home_down_div{
+	margin-top: 30px;
+}
+.css_logo{
+	font-size: 4em;
+	font-weight: bolder;
+}
+#css_logo_last_part{
+	float: left; 
+	margin-left: 65px; 
+	margin-top: -80px;
+}
+.red_dot{
+	width: 15px;
+	height: 15px;
+	background: #cc0000;
+	float: left;
+	margin-left: 35px;
+	border-radius: 50px;
+	margin-top: -42px;
+}
+#home_crime_btn{
+	float: left;
+	margin-left: 110px;
+	margin-top: -55px;
+	width: 400px;
+	height: 40px;
+	background: #cc0000;
+	border: 0;
+	text-align: left;
+	font-size: 1.9em;
+	color: #fff;
+}
+
+#panel_citizen{
+	background-color:rgba(0,0,0,0.7);
+	width: 100%;
+	height: 380px;
+}
+#panel_citizen_r_div{
+	width: 50%;
+	height: 100%;
+	float: left;
+	background-color: rgba(0,0,0,0.7);
+	border: 1px solid rgb(51, 50, 50);
+	border-right: 0px;
+}
+
+.panel_citizen_r_div_p{
+	margin: 20px 20px 20px 20px;
+	font-size: 14px;
+	font-family: Roboto-Regular;
+	padding-bottom: 8px;
+	text-align: justify;
+}
+
+#panel_citizen_l_div{
+	width: 49.7%;
+	height: 100%;
+	background-color: rgba(252,0,0,0.7);
+	float: right;
+	border: 1px solid rgb(51, 50, 50);
+	border-left: 0px;
+}
+
+.sms_lable{
+	font-family: Roboto-Regular;
+	margin-left: 20px;
+	margin-top: 10px;
+	font-weight: bold; 
+	background: #000; 
+	text-indent: 10px; 
+	height: 30px; 
+	line-height: 2.2; 
+	color: rgb(207, 0, 0);
+}
+
+.lable_margin{
+	font-family: Roboto-Regular;
+	margin-left: 20px;
+}
+.eg_sms{
+	font-size: 12px;
+	color: rgb(0, 0, 0);
+}
+
+#contact_msg{
+	display: none;
+}

@@ -1,0 +1,160 @@
+@font-face{
+	font-family: Michroma;
+	src: url(../fonts/Michroma.ttf);
+}
+@font-face{
+	font-family: Source Sans Pro;
+	src: url(../fonts/SourceSansPro-Regular.ttf);
+}
+.michroma{
+	font-family: Michroma;	
+}
+.SourceSansPro{
+	font-family: Source Sans Pro;
+}
+.text-crimatrix{
+	color: #cc0000 !important;	
+}
+.mission_detail{
+	font-size: 1.5em;
+	font-weight: normal;
+	text-align: justify;
+	font-family: Source Sans Pro;
+}
+.mission_detail_div{
+	margin-bottom: 40px;
+}
+/* footer */
+#footer{
+	background: #E9E9E9;
+	/*position: absolute;*/
+	width: 100%;	
+}
+#footer p{
+	margin-top: 10px;
+	font-size: 13px;
+	color: #fff;
+}
+#login_fail{
+	display: none;
+	color: #fff;
+	background-color: #FF4141;
+}
+.mbefore{
+	margin-top:20px;
+}
+.nav-tabs>li{
+	width: 50%;
+}
+.nav-tabs>li>a, .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
+	font-size: 1.5em;
+}
+.tab-content{
+	background-color: #FFFDFD;
+	border: 1px solid #ddd;
+	border-top: 0;
+	padding: 20px 10px 20px 10px;
+}
+.form-label{
+	font-size: 14px;
+	font-weight: normal;
+	font-family: Source Sans Pro;
+}
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+	body {
+		margin-top: 50px; /* adjust this if the height of the menu bar changes */
+	}
+	#logo_image{
+		width: 80%;
+	}
+	#forms{
+		margin-top: 20px;
+	}
+	#footer{
+		margin-top: 20px;
+	}
+	.home_header{
+		font-family: Michroma;
+		font-size: 1.6em;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	body {
+		margin-top: 100px; /* adjust this if the height of the menu bar changes */
+	}
+	#logo_image{
+		width: 100%;
+	}
+	.navbar-fixed-top .nav {
+		padding: 15px 0;
+	}
+	#forms{
+		margin-top: 20px;
+	}
+	#footer{
+		margin-top: 20px;
+	}
+	.home_header{
+		font-family: Michroma;
+		font-size: 1.6em;
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	body {
+		margin-top: 100px;/* adjust this if the height of the menu bar changes */
+		overflow: hidden;
+	}
+	#logo_image{
+		width: 100%;
+		margin-top: 15px;		
+	}
+	.navbar-fixed-top .nav {
+		padding: 15px 0;
+	}
+	#footer{
+		bottom: 0;
+	}
+	.home_header{
+		font-family: Michroma;
+		font-size: 1.8em;
+	}	
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	body {
+		margin-top: 100px; /* adjust this if the height of the menu bar changes */
+		overflow: hidden;
+	}
+	#logo_image{
+		width: 100%;
+		margin-top: 15px;
+	}
+	.navbar-fixed-top .nav {
+		padding: 15px 0;
+	}
+	#footer{
+		bottom: 0;
+	}
+	.home_header{
+		font-family: Michroma;
+		font-size: 1.8em;
+	}	
+}
+#hotel_sign_in_btn{
+	color: #fff;
+}
+#police_sign_in_btn{	
+	color: #fff;
+}
+#hotel_sign_in_btn:hover{	
+	color: #d43f3a;
+}
+#police_sign_in_btn:hover{	
+	color: #357ebd;
+}

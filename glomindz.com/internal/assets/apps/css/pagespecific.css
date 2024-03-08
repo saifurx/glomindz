@@ -1,0 +1,92 @@
+@CHARSET "ISO-8859-1";
+
+/*
+.navbar-inverse .navbar-inner {
+  background:#1c388b;
+ 
+}
+
+
+.navbar-inverse .brand{
+	 color: #ffffff !important;
+}
+.navbar-inverse .nav > li > a {
+  color: #7b95e4;
+}
+
+.navbar-inverse .brand:hover,
+.navbar-inverse .nav > li > a:hover,
+.navbar-inverse .brand:focus,
+.navbar-inverse .nav > li > a:focus {
+  color: #ffffff;
+}
+
+.navbar-inverse .nav .active>a,.navbar-inverse .nav .active>a:hover,.navbar-inverse .nav .active>a:focus,.navbar-inverse .nav li.dropdown.open>.dropdown-toggle,.navbar-inverse .nav li.dropdown.active>.dropdown-toggle,.navbar-inverse .nav li.dropdown.open.active>.dropdown-toggle
+{
+	color: #ffffff;
+	background-color: #152a69;
+}
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* client page */
+#new_client_section,
+#error_submit,
+#error_submit_address,
+#edit_client_section,
+#edit_error_submit,
+#edit_error_submit_address,
+#error_requirment,
+#new_projects_section,
+#edit_project_section,
+#edit_task_section,
+#new_task_section,
+#complexity_section,
+#users_section,
+#edit_deliverable_form,
+#new_deliverable_form,
+#new_user_form,
+#edit_error_requirment,
+#project_deliverables_section,
+#new_project_deliverables_form,
+#edit_project_deliverables_form{
+	display: none;
+}
+
+body #create_sub_task_Modal {
+	width: 750px;
+	margin-left: -375px;
+}
+body #view_sub_task_Modal {
+	width: 750px;
+	margin-left: -375px;
+}
+.modal-header {
+    background-color: #F5F5F5;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid #DDDDDD;
+    padding: 9px 15px;
+}
